@@ -1,0 +1,15 @@
+header {
+  background-color: #191716;
+  height: 70px;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  box-shadow: 0px 8px 5px black;
+  position: relative;
+  z-index: 2;
+
+  .app-title {
+    margin-left: 25px;
+  }
+}

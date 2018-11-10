@@ -7,3 +7,11 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import 'partials/header';
+@import 'partials/home';
+
+.main {
+  margin-top: 15px;
+  position: fixed;
+  top: 70px;
+}

@@ -11,9 +11,7 @@ $factory->define(Message::class, function (Faker $faker) {
       'receiver_id' => function(){
         return App\User::inRandomOrder()->pluck('id')->first();
       },
-      'thread_id' => function(){
-        return App\Thread::inRandomOrder()->pluck('id')->first();
-      },
+      'thread_id' => 1,
       'message' => $faker->realText(100),
     ];
 });

@@ -10,4 +10,16 @@ class Message extends Model
       'message',
   ];
 
+  public function thread(){
+    return $this->belongsTo('App\Thread');
+  }
+
+  public function sender(){
+    return $this->belongsTo('App\User', 'sender_id');
+  }
+
+  public function receiver(){
+    return $this->belongsTo('App\User', 'receiver_id');
+  }
+
 }

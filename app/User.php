@@ -27,4 +27,20 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function threads(){
+      return $this->belongsToMany('App\Thread');
+    }
+
+    public function sent(){
+      return $this->hasMany('App\Message', 'sender_id');
+    }
+
+    public function received(){
+      return $this->hasMany('App\Message', 'receiver_id');
+    }
+
+    public function getMessagesAttribute(){
+      return $this->sent->merge($this->received);
+    }
 }
